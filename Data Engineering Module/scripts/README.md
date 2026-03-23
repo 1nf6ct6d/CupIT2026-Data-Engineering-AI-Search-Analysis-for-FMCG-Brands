@@ -48,6 +48,15 @@ python -m src.orchestration.run_full_incremental_pipeline
 python -m src.orchestration.run_ai_pipeline
 ```
 
+
+## Какие файлы появятся после запуска
+
+- `data/raw_search_manual.json` - создается после шага сбора поисковой выдачи.
+- `data/raw_ai_manual.json` - создается после шага генерации AI-ответов.
+- `debug_search_response.xml` - отладочный XML последнего ответа Search API, создается в каталоге `scripts`.
+
+Если запускать только AI-ветку, то должен появиться или обновиться `data/raw_ai_manual.json`, но `data/raw_search_manual.json` уже должен существовать заранее.
+
 ## Структура проекта
 
 ```text
